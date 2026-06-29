@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { HELPLINE_RESOURCES } from "@/lib/utils";
-import { analyze, type TherapeuticApproach, type PetAnimation } from "@/lib/nlp";
-import { generateResponse } from "@/lib/unified-ai";
+import { analyze } from "@/lib/nlp";
+import {
+  generateResponse,
+  type TherapeuticApproach,
+  type PetAnimation,
+} from "@/lib/unified-ai";
 import {
   isDialogflowEnabled,
   detectIntent,
