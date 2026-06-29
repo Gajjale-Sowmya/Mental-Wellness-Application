@@ -124,7 +124,7 @@ export async function POST(request: NextRequest) {
         aiProvider = "chirag";
         approach = sentiment.emotionalAnalysis.isCrisis 
           ? "crisis_support" 
-          : sentiment.category === "positive" 
+          : sentiment.category === "normal" 
             ? "encouragement" 
             : "validation";
         suggestedAnimation = approachToAnimation(approach) as PetAnimationState;
