@@ -49,7 +49,7 @@ export const useThemeStore = create<ThemeState>()(
           ? (resolvedTheme === "light" ? "dark" : "light")
           : (theme === "light" ? "dark" : "light");
         
-        const newResolvedTheme = newTheme === "system" ? getSystemTheme() : newTheme;
+        const newResolvedTheme = newTheme;
         applyTheme(newResolvedTheme);
         set({ theme: newTheme, resolvedTheme: newResolvedTheme });
       },
