@@ -40,12 +40,12 @@ export async function updateSession(request: NextRequest) {
     request.nextUrl.pathname.startsWith(path)
   );
 
-  if (isProtectedPath && !user) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/";
-    url.searchParams.set("redirect", request.nextUrl.pathname);
-    return NextResponse.redirect(url);
-  }
+  // if (isProtectedPath && !user) {
+  //   const url = request.nextUrl.clone();
+  //   url.pathname = "/";
+  //   url.searchParams.set("redirect", request.nextUrl.pathname);
+  //   return NextResponse.redirect(url);
+  // }
 
   return supabaseResponse;
 }
